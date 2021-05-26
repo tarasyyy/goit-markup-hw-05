@@ -18,9 +18,9 @@
             <nav class="nav">
                 <a class="logo_h" href="./index.html"><span class="logo">Web</span>Studio</a>
                 <ul class="menu list">
-                    <li class="menu_item"><a class="link current line" href="./index.html">Студия</a></li>
+                    <li class="menu_item"><a class="link link1 current line" href="./index.html">Студия</a></li>
                     <li class="menu_item"><a class="link" href="./portfolio.html">Портфолио</a></li>
-                    <li class="menu_item"><a class="link" href="./contact">Контакты</a></li>
+                    <li class="menu_item"><a class="link" href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
             <!-- Контакты -->
@@ -102,7 +102,7 @@
         <section class="padding_top padding_bottom white_bg">
             <div class="container">
                 <h2 class="pth2 ">Чем мы занимаемся</h2>
-                <ul class="list card_set working">
+                <ul class="list card_set">
                     <li class="item thumb">
                         <img class="img" src="./images/img1.jpg" alt="Работа с компьютером" width="370" height="294">
                         <p class="label">Десктопные приложения</p>
@@ -322,6 +322,7 @@
     <!-- Подвал страницы -->
     <footer class="foot_cont dark_bg">
         <div class="container">
+            <a name="contacts"></a>
             <ul class="footer_list list">
                 <li class="footer_list_item">
                     <a class="logo_f" href="./index.html"><span class="logo">Web</span>Studio</a>
@@ -368,6 +369,18 @@
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <h3 class="add">Подпишитесь на рассылку</h3>
+                    <form action="" class="form">
+                        <input type="email" class="mailing" name="mailing_name" placeholder="E-mail" autocomplete="off">
+                        <button class="btn2" type="submit">Подписаться
+                            <svg class="telega_icons_svg">
+                                <use href="./images/icons/sprite.svg#icon-icon-send"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </li>
+                </ul>
             </ul>
             
         </div>
@@ -375,9 +388,50 @@
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button class="btn_m_close" data-modal-close>X</button>
-            <p class="">title</p>
-            <p class="">sfdgfnhdmnhrgehtnh nhghtrndhdgnrheghtrndhg nhghtrndhdgnrheghtrndhg nhghtrndhdgnrheghtrndhg nhghtrndhdgnrheghtrndhg nhghtrndhdgnrheghtrndhg</p>
+            <button class="btn_m_close" data-modal-close>
+                <svg class="close_icons_svg">
+                    <use href="./images/icons/sprite.svg#icon-close"></use>
+                </svg>
+            </button>
+            <p class="modal_title">Оставьте свои данные, мы вам перезвоним</p>
+            <form action="" class="form_footer">
+                <label for="username" class="modal_label">
+                    Имя
+                    <div class="modal_item">
+                        <input type="text" class="modal_input" pattern="^[a-zA-ZА-Яа-яЁё\s]+$" id="username">
+                        <svg class="modal_icons_svg">
+                            <use href="./images/icons/sprite.svg#icon-person"></use>
+                        </svg>
+                    </div>
+                </label>
+                <label for="telname" class="modal_label">
+                    Телефон
+                    <div class="modal_item">
+                        <input type="tel" class="modal_input" pattern="[0-9]{10}" id="telname">
+                        <svg class="modal_icons_svg">
+                            <use href="./images/icons/sprite.svg#icon-phone"></use>
+                        </svg>
+                    </div> 
+                </label>
+                <label for="emailname" class="modal_label">
+                    Почта
+                    <div class="modal_item">
+                        <input type="email" class="modal_input" id="emailname">
+                        <svg class="modal_icons_svg">
+                            <use href="./images/icons/sprite.svg#icon-email"></use>
+                        </svg>
+                    </div>
+                </label>
+                <label for="commentname" class="modal_label_text">
+                    Комментарий
+                    <textarea name="comment" id="commentname"  class="modal_textarea" placeholder="Введите текст"></textarea>
+                </label>
+                <input type="checkbox" class="checkbox visually-hidden" id="checkboxname">
+                <label for="checkboxname" for="checkbox" class="checkbox_label">
+                    Соглашаюсь с рассылкой и принимаю <a href="#" class="checkbox_link">Условия договора</a>
+                </label>
+                <button type="submit" class="btn3">Отправить</button>
+            </form>
     </div>
     </div>
     
